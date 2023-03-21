@@ -1,0 +1,26 @@
+extends layout.pug 
+
+block content 
+    section.section.page
+        h2.page__title Latest News
+
+        if newsList.length
+
+            div.news-list
+
+                each news in newsList
+
+                    a.news(href=`/news/get/${news.id}`)
+                        div.img-container
+                            img.news-image(src=`${news.imgUrl}`)
+                        div.news-content
+                            div.news-title #{news.title}
+                            div.news-date
+                                img.icon(src='/images/calendar.png')
+                                p #{news.pubDate}
+                            p.news-short-content #{news.shortContent}
+
+
+
+        else
+            h3 No News yet!

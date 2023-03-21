@@ -1,0 +1,27 @@
+extends layout.pug
+
+block content
+    section.section.page
+
+        if news
+            h3.news__title #{news.title}
+            div.news-icons
+                img.icon(src='/images/calendar.png')
+                p #{news.pubDate}
+                img.icon(src='/images/visibility.png')
+                p #{news.watched}
+                button.like-button
+                    img.icon#likeIcon(src='/images/like.png' data-id= news.id)
+                p#likeCount(value=`${news.likes}`) #{news.likes}
+
+            p.news__shorts #{news.shortContent}
+
+            div.news__image
+                img.news-image(src=`${news.imgUrl}`)
+
+            p.news__full-content #{news.fullContent}
+
+            script(src="http://localhost:3000/like.js" defer)
+        else
+            h3.news__title News Not found
+

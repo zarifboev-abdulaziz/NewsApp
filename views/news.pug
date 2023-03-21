@@ -1,0 +1,29 @@
+extends layout.pug
+
+block content
+    section.section.page
+        h2.page__title News List
+
+        if newsList.length
+
+            div.news-list
+
+                each news in newsList
+
+                    div.news
+                        div.img-container
+                            img.news-image(src=`${news.imgUrl}`)
+                        div.news-content
+                            div.news-title #{news.title}
+                            div.news-date
+                                img.icon(src='/images/calendar.png')
+                                p #{news.pubDate}
+                            p.news-short-content #{news.shortContent}
+                            div.actions
+                                a.btn.update-btn(href=`/news/update/${news.id}`) Edit
+                                button.btn.delete-btn(data-id= news.id) Delete
+
+            script(src="http://localhost:3000/news.js" defer)
+
+        else
+            h3 No News yet!

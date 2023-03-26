@@ -30,3 +30,4 @@ node app
 https://github.com/zarifboev-abdulaziz/NewsApp.git
 
 #### Link to hosted application on Glitch
+https://hushed-flash-delphinium.glitch.me/

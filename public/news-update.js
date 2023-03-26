@@ -1,7 +1,13 @@
 let updateNewsForm = document.getElementById('update-news-form');
+let title = document.getElementById('title');
 
 
 updateNewsForm.addEventListener('submit', e => {
+    if(title.value.trim() == ''){
+        alert("Title should not be Empty")
+        return
+    }
+
     e.preventDefault()
 
     let formData = new FormData(updateNewsForm)

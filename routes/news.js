@@ -20,6 +20,12 @@ router.get('/get/:id', (req, res) => {
     res.render('news-detail', { news: news})
 })
 
+router.get('/topic/:id', (req, res) => {
+    let topicId = req.params.id
+    let newsList = getAll('news').filter(news => news.topicId == topicId)
+    res.render('home', { newsList: newsList})
+})
+
 router.get('/like/increment/:id', (req, res) => {
     let id = req.params.id
 

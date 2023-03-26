@@ -9,7 +9,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-app.use('/students', require('./routes/students'))
 app.use('/news', require('./routes/news'))
 
 app.get('/', (req, res) => {

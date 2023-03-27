@@ -33,13 +33,17 @@ a {
     background-color: var(--color-primary);
 }
 
+.wrapper {
+    height: 100vh;
+}
+
 .section {
     max-width: 1100px;
     margin: 0 auto;
 }
 
 
-/* Navbars*/
+/* Navbars */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -357,4 +361,19 @@ h3 {
     flex-direction: column;
 
 
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-primary);
+    height: 5rem;
+}
+
+.footer--content {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    padding: 1rem;
+    opacity: .8;
+    text-align: center;
 }

@@ -99,7 +99,7 @@ router.delete('/delete', (req, res) => {
 
     let newsList = getAll('news')
 
-    console.log(req.body.id)
+    // console.log(req.body.id)
     let filteredNews = newsList.filter(news => news.id != req.body.id)
 
     saveAll('news', filteredNews)

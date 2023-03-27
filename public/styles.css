@@ -34,7 +34,7 @@ a {
 }
 
 .wrapper {
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .section {
@@ -365,8 +365,12 @@ h3 {
 
 /* Footer */
 .footer {
-    background-color: var(--color-primary);
+    /*background-color: var(--color-primary);*/
     height: 5rem;
+    /*position: absolute;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer--content {
